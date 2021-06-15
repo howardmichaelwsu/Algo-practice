@@ -101,3 +101,57 @@ console.log(x);
 // [1, 3, 11, 7]
 
 // activity 3
+
+var x = [1, 3, 5];
+// x[0] will now be equal to 5 (x[2] = 5)
+x[0] = x[2];
+// x[1] will be 5 since x[0] is now equal to 5 
+x[1] = x[0];
+console.log(0)
+// [5, 5, 5]
+
+var x = [1,3,5];
+var y = [0,5,7];
+// x[0] = 3 + 7
+x[0] = x[1] + y[2];
+// y[1] = 7 - 10 this doesn't matter in this equation since it is just console.log(x)
+y[1] = y[2] - x[0];
+console.log(x);
+// [10,3,5]
+
+var x = [1,3,5,8];
+// x[0] = x[3]
+x[0] = x[x.length - 1];
+console.log(0);
+
+var x = [1,3,5,8];
+// temp = x[3] which is 8
+var temp = x[x.length - 1];
+// x[3] will now equal 1 since that is what x[0] is
+x[x.length - 1] = x[0];
+console.log(x);
+// [1,3,5,1]
+
+var x = [1,3,5,8];
+// temp = x[3] which is 8
+var temp = x[x.length - 1];
+// x[3] will now equal 1 since that is what x[0] is
+x[x.length - 1] = x[0];
+// temp is equal to 8 so x[0] is now 8 this equaion is to switch around numbers in an array
+x[0] = temp;
+console.log(x);
+// [8,3,5,1]
+
+var x = [1,3,5,8];
+// .pop is deleting the last number of array
+x.pop();
+// .push is putting the value in the last postion in an array
+x.push(7);
+console.log(x)
+// [1,3,5,7]
+
+var x = [1,3,5];
+x[0] = 15;
+// this will act as .push in this situation but it will always just replace what it is in the array
+x[3] = 77;
+console.log(x);
